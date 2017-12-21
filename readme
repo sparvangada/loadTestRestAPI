@@ -1,0 +1,32 @@
+/*Disclaimer: Beginner to python - The script was run on windows,not tested on linux */
+
+1. Add a "[" to the begining and "]" to the end of the Json inputfile. This will make it a json Array.
+
+2. Have a version of python 3+ else unicode modifications need to be done when reading off of an array. I have a 3.6.3.
+
+3. I normally have all my .py(python extension) scripts in a src dir(I created it),under python install (C:\python3.6.3\src). I also have
+my json data file sitting in the src dir, but you can create a data dir and then change the reference to that dir/file in the script.
+
+
+4. Anytime you get a  module not found(eg: requests not found). Go to your python dir(C:\python3.6.3\Scripts) unders scripts, 
+do an easy_install.exe requests."requests" here is the name of the module. This will install the module "reqeusts" for you(like npm install :-) )
+
+5. Change the name of the file on this line.
+    	requestArray = json.load(open('your_file_name.json'))
+    Change the URL 
+   	 url='https://host:port/your_context_path'
+    Change headers(authorization) and add more if needed.
+	headers = {'Authorization' : 'xxxxxx', 'Accept' : 'application/json', 'Content-Type' : 'application/json'}
+
+6. You can adjust the sleep time by increasing or decreasing this value in code.
+# Wait for 10 seconds
+	time.sleep(10)
+
+7. Run it using
+    cmd:> python restApi.py > outputfile
+
+
+8. loadTestRestApi.sh is a bash file to run the same script manytimes parallely to do a load test.
+Usage : loadTestRestApi.sh num_parallel_runs (eg: loadTestRestApi.sh 4)
+
+Output of python is in output.txt(the execution of the restApi) and the output of bash is in bash.out :-)
