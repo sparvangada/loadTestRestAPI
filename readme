@@ -1,5 +1,8 @@
 /*Disclaimer: Beginner to python - The script was run on windows,not tested on linux */
 
+Objective: read multiple jsons from a file and send it to a rest Url.If needed, run the same script parallel any number of times to 
+do a load test.
+
 1. Add a "[" to the begining and "]" to the end of the Json inputfile. This will make it a json Array.
 
 2. Have a version of python 3+ else unicode modifications need to be done when reading off of an array. I have a 3.6.3.
